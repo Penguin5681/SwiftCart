@@ -1,0 +1,52 @@
+name: Build and Release APKs (Development and Testing)
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-release-apks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Source Code
+      uses: actions/checkout@v3
+
+    - name: Configure JDK Environment
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '23'
+
+    - name: Grant Permissions for Gradle Wrapper
+      run: chmod +x ./android/gradlew
+
+    - name: Cache Node Modules
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-cache-
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Cache Gradle Files
+      uses: actions/cache@v3
+      with:
+        path: ~/.gradle/caches
+        key: gradle-cache-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          gradle-cache-${{ runner.os }}-
+
+    - name: Build Release APKs
+      working-directory: android
+      run: ./gradlew assembleRelease
+
+    - name: Upload Split APKs
+      uses: actions/upload-artifact@v4
+      with:
+        name: split-apks
+        path: android/app/build/outputs/apk/release/*.apk
