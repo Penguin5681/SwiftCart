@@ -12,7 +12,7 @@ SwiftCart is a fast and modern ecommerce app offering a seamless shopping experi
 - Advanced search and filtering options.  
 - Wishlist and cart management.  
 
-## CI/CD Workflow  
+## [CI/CD Workflow](https://github.com/Penguin5681/SwiftCart/actions)
 Both branches have CI/CD workflows set up to generate a release build APK. Users can download the latest APK directly from the workflow artifacts for testing or production use.  
 
 ## Running the App Locally  
