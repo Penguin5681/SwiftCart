@@ -1,5 +1,6 @@
 
 # SwiftCart  
+## Currently Under development
 
 SwiftCart is a fast and modern ecommerce app offering a seamless shopping experience. The app is currently under active development, with two primary branches:  
 
