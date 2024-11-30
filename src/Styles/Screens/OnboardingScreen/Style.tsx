@@ -4,9 +4,9 @@
  Licensed under the CC0-1.0 License.
 */
 import {StyleSheet} from "react-native";
-import {Colors} from "../../Constants/Colors/Colors.tsx";
-import {getSoraFontFamily} from "../../Util/FontHelper/fontHelper";
-import {horizontalScale, scaleFontSize, verticalScale} from "../../Util/Scaling/scalingUtil.ts";
+import {Colors} from "../../../Constants/Colors/Colors.tsx";
+import {getSoraFontFamily} from "../../../Util/FontHelper/fontHelper";
+import {horizontalScale, scaleFontSize, verticalScale} from "../../../Util/Scaling/scalingUtil.ts";
 
 export const Style = StyleSheet.create({
 	pagerView: {

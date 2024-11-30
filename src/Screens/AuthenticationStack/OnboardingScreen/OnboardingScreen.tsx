@@ -17,12 +17,13 @@ import {useTheme} from '../../../Hooks/themeHook.tsx';
 import {Colors} from '../../../Constants/Colors/Colors.tsx';
 import {GlobalStyle} from '../../../Styles/Global/GlobalStyle.tsx';
 import PagerView from 'react-native-pager-view';
-import {Style} from '../../../Styles/OnboardingScreen/Style.tsx';
+import {Style} from '../../../Styles/Screens/OnboardingScreen/Style.tsx';
 import {
 	heightPercentageToDP,
 	widthPercentageToDP,
 } from 'react-native-responsive-screen';
 import {useRef, useState} from 'react';
+import {AuthenticationRoutes} from "../../../Navigation/RootNavigation/Routes.tsx";
 
 const OnboardingScreen = ({navigation} : {navigation: any}) => {
 	const pagerViewRef = useRef<PagerView>(null);
@@ -59,13 +60,18 @@ const OnboardingScreen = ({navigation} : {navigation: any}) => {
 			/>
 
 			<View style={Style.header}>
-				<TouchableOpacity>
+				<TouchableOpacity
+					onPress={() => {
+						navigation.navigate(AuthenticationRoutes.LoginScreen);
+					}}
+				>
 					<Text
 						style={[
 							Style.skipLabel,
 							{color: useTheme().isDarkMode ? Colors.White : Colors.Black},
 						]}>
 						Skip
+
 					</Text>
 				</TouchableOpacity>
 			</View>
@@ -178,7 +184,7 @@ const OnboardingScreen = ({navigation} : {navigation: any}) => {
 						if (currentPage < 2) {
 							pagerViewRef.current?.setPage(currentPage + 1);
 						} else {
-							// Handle "Get Started" action
+							navigation.navigate(AuthenticationRoutes.LoginScreen);
 						}
 					}}>
 					<Text style={Style.activeText}>

@@ -36,6 +36,10 @@
 		7D2441093D72424DA090E6DA /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A53C3D16653A4CF1BC5538DB /* Sora-Regular.ttf */; };
 		09A3AA7967864020B0FB9518 /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D588643F6E3B425696B3E8FF /* Sora-SemiBold.ttf */; };
 		8DAB6BE606D04C6EBAD574F3 /* Sora-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BFE901343B041279674F36F /* Sora-Thin.ttf */; };
+		B55B1AF3F36B4244B1E2740B /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20BEE0DCEDD445A0BB157B2F /* DancingScript-Bold.ttf */; };
+		F859100859664FEDAE2137F0 /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A589956BE53D402C8C737DAA /* DancingScript-Medium.ttf */; };
+		72CEC5D875F74555A57994D1 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200E541063D54026B01D4E21 /* DancingScript-Regular.ttf */; };
+		8DE0FA512E664494A684DAAB /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82EE66652E4841349AD092D0 /* DancingScript-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		A53C3D16653A4CF1BC5538DB /* Sora-Regular.ttf */ = {isa = PBXFileReference; name = "Sora-Regular.ttf"; path = "../src/Assets/Fonts/Sora-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D588643F6E3B425696B3E8FF /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; name = "Sora-SemiBold.ttf"; path = "../src/Assets/Fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1BFE901343B041279674F36F /* Sora-Thin.ttf */ = {isa = PBXFileReference; name = "Sora-Thin.ttf"; path = "../src/Assets/Fonts/Sora-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20BEE0DCEDD445A0BB157B2F /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; name = "DancingScript-Bold.ttf"; path = "../src/Assets/Fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A589956BE53D402C8C737DAA /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; name = "DancingScript-Medium.ttf"; path = "../src/Assets/Fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		200E541063D54026B01D4E21 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; name = "DancingScript-Regular.ttf"; path = "../src/Assets/Fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		82EE66652E4841349AD092D0 /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; name = "DancingScript-SemiBold.ttf"; path = "../src/Assets/Fonts/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,10 @@
 				A53C3D16653A4CF1BC5538DB /* Sora-Regular.ttf */,
 				D588643F6E3B425696B3E8FF /* Sora-SemiBold.ttf */,
 				1BFE901343B041279674F36F /* Sora-Thin.ttf */,
+				20BEE0DCEDD445A0BB157B2F /* DancingScript-Bold.ttf */,
+				A589956BE53D402C8C737DAA /* DancingScript-Medium.ttf */,
+				200E541063D54026B01D4E21 /* DancingScript-Regular.ttf */,
+				82EE66652E4841349AD092D0 /* DancingScript-SemiBold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -342,6 +354,10 @@
 				7D2441093D72424DA090E6DA /* Sora-Regular.ttf in Resources */,
 				09A3AA7967864020B0FB9518 /* Sora-SemiBold.ttf in Resources */,
 				8DAB6BE606D04C6EBAD574F3 /* Sora-Thin.ttf in Resources */,
+				B55B1AF3F36B4244B1E2740B /* DancingScript-Bold.ttf in Resources */,
+				F859100859664FEDAE2137F0 /* DancingScript-Medium.ttf in Resources */,
+				72CEC5D875F74555A57994D1 /* DancingScript-Regular.ttf in Resources */,
+				8DE0FA512E664494A684DAAB /* DancingScript-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

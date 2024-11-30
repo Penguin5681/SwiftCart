@@ -22,6 +22,22 @@
       "sha1": "48890a29aafcb54748ace8dadff63a2dc261fe6c"
     },
     {
+      "path": "src/Assets/Fonts/DancingScript-Bold.ttf",
+      "sha1": "40e545d9cdad467a919c2a38c032bc4fdb69c01f"
+    },
+    {
+      "path": "src/Assets/Fonts/DancingScript-Medium.ttf",
+      "sha1": "575d42d95b4b562cbd91341e61ab754386ffeadd"
+    },
+    {
+      "path": "src/Assets/Fonts/DancingScript-Regular.ttf",
+      "sha1": "77b7bf804974618d28d7b73c79ea5d34c82cb704"
+    },
+    {
+      "path": "src/Assets/Fonts/DancingScript-SemiBold.ttf",
+      "sha1": "3d2e9198ccd497e0ccaf29b53cd2e4e9063dc78a"
+    },
+    {
       "path": "src/Assets/Fonts/Inter-Black.ttf",
       "sha1": "f79fa58ace5f55e338c99bf71e7e0702841df6f2"
     },

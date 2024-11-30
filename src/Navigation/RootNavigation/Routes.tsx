@@ -5,7 +5,8 @@
 */
 
 export const AuthenticationRoutes = {
-	OnboardingScreen: "OnboardingScreen.tsx",
+	OnboardingScreen: "OnboardingScreen",
+	LoginScreen: "LoginScreen",
 };
 
 export const CoreRoutes = {

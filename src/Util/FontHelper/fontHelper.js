@@ -75,3 +75,18 @@ export const getSoraFontFamily = (baseFont = 'Sora', weight) => {
 			return `${baseFont}-Regular`;
 	}
 };
+
+export const getDancingScript = (basefont = 'DancingScript', weight) => {
+	switch (weight) {
+		case '400':
+			return `${basefont}-Regular`;
+		case '700':
+			return `${basefont}-Bold`;
+		case '600':
+			return `${basefont}-SemiBold`;
+		case '500':
+			return `${basefont}-Medium`;
+		default:
+			return `${basefont}-Regular`;
+	}
+}

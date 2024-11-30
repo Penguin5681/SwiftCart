@@ -7,6 +7,7 @@
 import {AuthenticationRoutes} from './Routes.tsx';
 import {createStackNavigator} from "@react-navigation/stack";
 import OnboardingScreen from "../../Screens/AuthenticationStack/OnboardingScreen/OnboardingScreen.tsx";
+import LoginScreen from "../../Screens/AuthenticationStack/LoginScreen/LoginScreen.tsx";
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,9 @@ const RootNavigation = () => {
 			<Stack.Screen
 				name={AuthenticationRoutes.OnboardingScreen}
 				component={OnboardingScreen}/>
+			<Stack.Screen
+				name={AuthenticationRoutes.LoginScreen}
+				component={LoginScreen}/>
 		</Stack.Navigator>
 	);
 };
