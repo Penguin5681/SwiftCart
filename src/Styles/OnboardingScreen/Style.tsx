@@ -1,8 +1,12 @@
+/*
+ SwiftCart v1.0.0
+ Copyright (c) 2024 Pranav Sinha
+ Licensed under the CC0-1.0 License.
+*/
 import {StyleSheet} from "react-native";
 import {Colors} from "../../Constants/Colors/Colors.tsx";
-import {getComfortaFont, getSoraFontFamily} from "../../Util/FontHelper/fontHelper";
+import {getSoraFontFamily} from "../../Util/FontHelper/fontHelper";
 import {horizontalScale, scaleFontSize, verticalScale} from "../../Util/Scaling/scalingUtil.ts";
-import {widthPercentageToDP} from "react-native-responsive-screen";
 
 export const Style = StyleSheet.create({
 	pagerView: {
@@ -70,5 +74,11 @@ export const Style = StyleSheet.create({
 	inActiveText: {
 		color: "#A8A8A9",
 		fontSize: scaleFontSize(17),
+	},
+	buttonWrapper: {
+		flex: 1,
+		flexGrow: 0.34,
+		marginHorizontal: horizontalScale(25),
+		justifyContent: 'center',
 	}
 });

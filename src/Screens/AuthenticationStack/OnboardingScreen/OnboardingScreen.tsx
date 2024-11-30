@@ -1,3 +1,8 @@
+/*
+ SwiftCart v1.0.0
+ Copyright (c) 2024 Pranav Sinha
+ Licensed under the CC0-1.0 License.
+*/
 import {
 	Animated,
 	Image,
@@ -19,7 +24,7 @@ import {
 } from 'react-native-responsive-screen';
 import {useRef, useState} from 'react';
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation} : {navigation: any}) => {
 	const pagerViewRef = useRef<PagerView>(null);
 	const [currentPage, setCurrentPage] = useState<number>(0);
 	const dotWidth = useRef([
@@ -115,7 +120,9 @@ const OnboardingScreen = () => {
 							Make Payment
 						</Text>
 
-						<Text style={Style.slideDescriptionFooter}>
+						<Text
+							adjustsFontSizeToFit={true}
+							style={Style.slideDescriptionFooter}>
 							Seamless payments and speedy delivery. Start shopping smarter
 							today.
 						</Text>

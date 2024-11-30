@@ -1,3 +1,8 @@
+/*
+ SwiftCart v1.0.0
+ Copyright (c) 2024 Pranav Sinha
+ Licensed under the CC0-1.0 License.
+*/
 export const getComfortaFont = (baseFont = "Comfortaa", weight) => {
 	switch (weight) {
 		case '300':
