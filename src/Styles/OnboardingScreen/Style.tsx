@@ -45,8 +45,8 @@ export const Style = StyleSheet.create({
 	indicatorDotWrapper: {
 		flexDirection: 'row',
 		justifyContent: 'center',
-		position: 'absolute',
 		alignSelf: 'center',
+		position: 'absolute',
 		width: '100%'
 	},
 	activeDot: {
