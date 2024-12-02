@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-release-apks:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout Source Code
@@ -19,13 +19,10 @@ jobs:
         distribution: 'zulu'
         java-version: '23'
 
-    - name: Grant Permissions for Gradle Wrapper
-      run: chmod +x ./android/gradlew
-
     - name: Cache Node Modules
       uses: actions/cache@v3
       with:
-        path: ~/.npm
+        path: C:\Users\runneradmin\AppData\Roaming\npm-cache
         key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-npm-cache-
@@ -36,17 +33,17 @@ jobs:
     - name: Cache Gradle Files
       uses: actions/cache@v3
       with:
-        path: ~/.gradle/caches
+        path: C:\Users\runneradmin\.gradle\caches
         key: gradle-cache-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           gradle-cache-${{ runner.os }}-
 
     - name: Build Release APKs
       working-directory: android
-      run: ./gradlew assembleRelease
+      run: .\gradlew.bat assembleRelease
 
     - name: Upload Split APKs
       uses: actions/upload-artifact@v4
       with:
         name: split-apks
-        path: android/app/build/outputs/apk/release/*.apk
+        path: android\app\build\outputs\apk\release\*.apk
