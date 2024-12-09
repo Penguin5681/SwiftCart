@@ -7,43 +7,33 @@ on:
 
 jobs:
   build-release-apks:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Source Code
       uses: actions/checkout@v3
 
-    - name: Configure JDK Environment
-      uses: actions/setup-java@v3
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
       with:
-        distribution: 'zulu'
-        java-version: '23'
+        flutter-version: 'latest'
 
-    - name: Cache Node Modules
+    - name: Cache Pub Dependencies
       uses: actions/cache@v3
       with:
-        path: C:\Users\runneradmin\AppData\Roaming\npm-cache
-        key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+        path: ${{ runner.tool_cache }}/flutter
+        key: ${{ runner.os }}-flutter-${{ hashFiles('**/pubspec.yaml') }}
         restore-keys: |
-          ${{ runner.os }}-npm-cache-
+          ${{ runner.os }}-flutter-
 
     - name: Install Dependencies
-      run: npm install
+      run: flutter pub get
 
-    - name: Cache Gradle Files
-      uses: actions/cache@v3
-      with:
-        path: C:\Users\runneradmin\.gradle\caches
-        key: gradle-cache-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          gradle-cache-${{ runner.os }}-
+    - name: Build Release APK
+      run: flutter build apk --release
 
-    - name: Build Release APKs
-      working-directory: android
-      run: .\gradlew.bat assembleRelease
-
-    - name: Upload Split APKs
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: split-apks
-        path: android\app\build\outputs\apk\release\*.apk
+        name: release-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
