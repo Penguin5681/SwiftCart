@@ -3,7 +3,7 @@ name: Build and Release APKs (Development and Testing)
 on:
   push:
     branches:
-      - dev
+      - prod
 
 jobs:  
   build:      
